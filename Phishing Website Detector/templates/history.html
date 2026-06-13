@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scan History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="history-container">
+
+    <h1>📜 Scan History</h1>
+
+    <br><br>
+
+    <table>
+
+        <tr>
+            <th>ID</th>
+            <th>URL</th>
+            <th>Result</th>
+            <th>Risk Score</th>
+        </tr>
+
+        {% for row in data %}
+
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}%</td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+    <br>
+
+    <a href="/">
+        <button>🏠 Back Home</button>
+    </a>
+
+</div>
+
+</body>
+</html>

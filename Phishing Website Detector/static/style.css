@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --bg-dark:#070B1A;
+    --card-dark:#12182B;
+    --card-dark-2:#181F35;
+    --purple:#8B5CF6;
+    --pink:#EC4899;
+    --blue:#3B82F6;
+    --green:#22C55E;
+    --red:#EF4444;
+    --text:#FFFFFF;
+    --text-light:#B8C0D4;
+    --border:#2A3352;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#070B1A,#0F172A);
+    color:white;
+}
+
+/* HOME PAGE */
+
+.container{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+.card{
+    width:650px;
+    padding:40px;
+    background:linear-gradient(135deg,#151C32,#221B42);
+    border:1px solid var(--border);
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 0 30px rgba(139,92,246,.15);
+}
+
+.card h1{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:var(--text-light);
+}
+
+input{
+    width:100%;
+    padding:16px;
+    margin-top:20px;
+    background:#151C32;
+    border:1px solid var(--border);
+    color:white;
+    border-radius:12px;
+    font-size:16px;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    margin-top:15px;
+    border:none;
+    border-radius:12px;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    background:linear-gradient(135deg,#8B5CF6,#EC4899);
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+}
+
+/* FEATURES */
+
+.features{
+    margin-top:30px;
+    text-align:left;
+}
+
+.features h2{
+    margin-bottom:10px;
+}
+
+.features li{
+    list-style:none;
+    margin:8px 0;
+    color:var(--text-light);
+}
+
+/* DASHBOARD */
+
+.dashboard-container{
+    width:90%;
+    margin:auto;
+    padding:40px 0;
+}
+
+.dashboard-container h1{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.stat-card{
+    padding:30px;
+    background:linear-gradient(135deg,#151C32,#221B42);
+    border-radius:20px;
+    border:1px solid var(--border);
+    text-align:center;
+}
+
+.stat-card h2{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.safe h2{
+    color:var(--green);
+}
+
+.danger h2{
+    color:var(--red);
+}
+
+.total h2{
+    color:var(--purple);
+}
+
+/* HISTORY */
+
+.history-container{
+    width:90%;
+    margin:auto;
+    padding:40px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#151C32;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+th{
+    background:#8B5CF6;
+}
+
+th,td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid var(--border);
+}
+
+/* RESULT */
+
+.risk-box{
+    margin-top:25px;
+}
+
+.progress{
+    width:100%;
+    height:25px;
+    background:#2A3352;
+    border-radius:20px;
+    overflow:hidden;
+    margin:15px 0;
+}
+
+.progress-fill{
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        #22C55E,
+        #FACC15,
+        #EF4444
+    );
+}
+
+/* GLOW EFFECT */
+
+.card:hover,
+.stat-card:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 0 15px rgba(139,92,246,.3),
+    0 0 30px rgba(168,85,247,.2);
+}
+
+.history-container{
+    width:90%;
+    margin:auto;
+    padding:40px 0;
+}
+
+.history-container h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:linear-gradient(
+        135deg,
+        #151C32,
+        #221B42
+    );
+
+    border-radius:20px;
+    overflow:hidden;
+}
+
+th{
+    background:#8B5CF6;
+    color:white;
+}
+
+th,td{
+    padding:16px;
+    text-align:center;
+    border-bottom:1px solid #2A3352;
+}
+
+tr:hover{
+    background:rgba(139,92,246,.1);
+}
+
+.action-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:40px;
+}
+
+.action-buttons button{
+    width:200px;
+}

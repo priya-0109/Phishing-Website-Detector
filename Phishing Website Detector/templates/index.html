@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Website Detector</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>🛡️ Phishing Website Detector</h1>
+
+            <p>
+                Detect suspicious and phishing websites instantly using AI-powered analysis.
+            </p>
+
+            <form action="/predict" method="POST">
+
+                <input
+                    type="text"
+                    name="url"
+                    placeholder="Enter Website URL..."
+                    required
+                >
+
+                <button type="submit">
+                    Analyze Website
+                </button>
+
+                <br><br>
+
+                <a href="/history">
+                    <button>View Scan History</button>
+                </a>
+
+                <br><br>
+
+                <a href="/dashboard">
+                    <button>View Dashboard</button>
+                </a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="features">
+
+    <h2>Features</h2>
+
+    <ul>
+        <li>✔ URL Analysis</li>
+        <li>✔ Risk Score Detection</li>
+        <li>✔ Phishing Detection</li>
+        <li>✔ Scan History</li>
+        <li>✔ Dashboard Analytics</li>
+        <li>✔ SQLite Database</li>
+    </ul>
+
+</div>
+
+</body>
+</html>

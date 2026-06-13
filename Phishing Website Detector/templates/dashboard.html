@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <h1>📊 Phishing Detection Dashboard</h1>
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <h2>{{ total_scans }}</h2>
+            <p>Total Scans</p>
+        </div>
+
+        <div class="stat-card safe">
+            <h2>{{ safe_count }}</h2>
+            <p>Safe Websites</p>
+        </div>
+
+        <div class="stat-card danger">
+            <h2>{{ phishing_count }}</h2>
+            <p>Phishing Websites</p>
+        </div>
+
+    </div>
+
+    <div class="action-buttons">
+    <a href="/"><button>🏠 Home</button></a>
+    <a href="/history"><button>📜 History</button></a>
+</div>
+
+</div>
+
+</body>
+</html>
